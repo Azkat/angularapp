@@ -8,15 +8,26 @@ class IndexModel extends CommonFunction{
 		
 	}
 	
-	public function get_data(){
-		
+	public function get_all_data(){	
 		$result = array();
 
-		$sql = "SELECT title FROM pro";
+		$sql = "SELECT id, title FROM pro";
 		$sth = $this->db->prepare($sql);
 		$sth->execute(array());
 		$result = $sth->fetchAll();
-		echo json_encode($result);
+
+		return $result;
+	}
+
+	public function get_data($id){	
+		$result = array();
+
+		$sql = "SELECT id, title FROM pro WHERE id = ?";
+		$sth = $this->db->prepare($sql);
+		$sth->execute(array(
+			$id,
+			));
+		$result = $sth->fetchAll();
 
 		return $result;
 	}
