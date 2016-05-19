@@ -13,6 +13,8 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 
 .clear {clear: both;}
 
+li {list-style: none;}
+
 a, button, img {outline:none!important;}
 
 a:focus, *:focus ,button:focus {outline:none!important;}
@@ -24,3 +26,30 @@ a:hover {
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
+
+body{
+    background: #f9f9f9;
+}
+
+#container {
+    background: #f9f9f9;
+}
+
+#navarea {
+    margin: 0 auto;
+    width: 980px;
+    padding: 35px 10px 20px;
+    background: #e8e8e8;
+}
+
+#content {
+    margin: 0 auto;
+    width: 980px;
+    padding: 10px 10px 20px;
+    background: #fcfcfc;
+}
+
+#content .title-list ul li {
+    margin-bottom: 10px;
+}
+
