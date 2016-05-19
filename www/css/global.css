@@ -38,18 +38,31 @@ body{
 #navarea {
     margin: 0 auto;
     width: 980px;
-    padding: 35px 10px 20px;
+    padding: 35px 30px 20px;
     background: #e8e8e8;
 }
 
 #content {
     margin: 0 auto;
     width: 980px;
-    padding: 10px 10px 20px;
+    padding: 10px 15px 20px;
     background: #fcfcfc;
+    min-height: 700px;
+}
+
+#content .title-list {
+    padding: 5px 15px 10px;
 }
 
 #content .title-list ul li {
     margin-bottom: 10px;
 }
 
+#content .form-area {
+    margin-top: 30px;
+}
+
+#content .form-area h2 {
+    padding-right: 15px;
+    padding-left: 15px;
+}

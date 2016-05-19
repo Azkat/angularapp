@@ -19,6 +19,16 @@ class IndexModel extends CommonFunction{
 		return $result;
 	}
 
+	public function create_data($title) {
+		$sql = 'INSERT INTO pro (title) VALUES (?)';
+		$sth = $this->db->prepare($sql);
+		$sth->execute(array(
+			$title,
+		));
+		header('Location: '.$_SERVER['HTTP_REFERER']);
+		exit;
+	}
+
 	public function get_data($id){	
 		$result = array();
 

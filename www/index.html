@@ -20,10 +20,20 @@
             <a href="/?id={{project.id}}" ng-click="titleClick(project.id)">
               {{project.title}}
             </a>
+            {{editProject.text}}
           </li>
         </ul>
       </div>
-      
+
+      <div class="form-area">
+        <h2>
+          NEW PROJECT?
+        </h2>
+        <form class="col-md-4" action="api.php" method="post">
+          <input name="title" type="text" class="form-control">
+          <input type="submit" class="btn btn-default">
+        </form>
+      </div>
     </div>
   </div>
 

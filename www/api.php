@@ -14,6 +14,8 @@ class IndexController{
 
     if (isset($_GET['id'])) {
       $data = $model->get_data($_GET['id']);
+    } else if (isset($_POST['title'])) {
+      $data = $model->create_data($_POST['title']);
     } else {
       $data = $model->get_all_data();
     } 
