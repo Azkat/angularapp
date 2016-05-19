@@ -7,7 +7,7 @@ var app = angular.module('app', ['ngResource','ngRoute']).config(['$locationProv
 
 }]);
 
-app.controller('MainCtrl', function($scope, $resource, $window, $location, $route) {
+app.controller('MainCtrl', function($scope, $resource, $window, $location, $route, $rootScope) {
   var idParam = $location.search().id;
   if (idParam) {
     var Project = $resource('./api.php?id=' +  idParam, {id: '@id'});
@@ -19,8 +19,9 @@ app.controller('MainCtrl', function($scope, $resource, $window, $location, $rout
 
   $scope.click = function(id) {
     $scope.id = id;
-    $location.path('/').search({'id': id});
-    $route.reload();
+    $location.path('/').search({'id': id});  
+    var Project = $resource('./api.php?id=' +  id, {id: '@id'});
+    $scope.projects = Project.query();
   }
 
 });
