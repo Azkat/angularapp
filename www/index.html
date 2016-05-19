@@ -3,13 +3,18 @@
 <head>
 <title>新seodoor.jp</title>
 <link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body ng-controller="MainCtrl">
 
   <div>
+    <a ng-click="homeClick()">HOME</a>
+  </div>
+
+  <div>
     <ul>
       <li ng-repeat="project in projects" ng-cloak>{{project.id}} : 
-        <a ng-click="click(project.id)">
+        <a href="/?id={{project.id}}" ng-click="titleClick(project.id)">
           {{project.title}}
         </a>
       </li>

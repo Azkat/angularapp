@@ -17,11 +17,25 @@ app.controller('MainCtrl', function($scope, $resource, $window, $location, $rout
     $scope.projects = Project.query();
   }
 
-  $scope.click = function(id) {
+  $scope.titleClick = function(id) {
     $scope.id = id;
-    $location.path('/').search({'id': id});  
+    $location.path('/').search({'id': id});
     var Project = $resource('./api.php?id=' +  id, {id: '@id'});
     $scope.projects = Project.query();
   }
 
+  $scope.homeClick = function(){
+    $location.path('').search({'key': null});
+    var Project = $resource('./api.php');
+    $scope.projects = Project.query();
+  }
 });
+
+//reload when history back or go
+window.onpopstate = function() {
+  location.reload();
+}
+
+
+
+

@@ -17,6 +17,9 @@ a, button, img {outline:none!important;}
 
 a:focus, *:focus ,button:focus {outline:none!important;}
 
+a:hover {
+    cursor:pointer;
+}
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
