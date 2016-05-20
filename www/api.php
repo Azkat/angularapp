@@ -22,6 +22,7 @@ class IndexController{
     header('Content-Type: application/json');
     echo json_encode($data);
   }
+
 }
 
 new IndexController;
