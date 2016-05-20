@@ -25,7 +25,7 @@ class IndexModel extends CommonFunction{
 		$sth->execute(array(
 			$title,
 		));
-		header('Location: '.$_SERVER['HTTP_REFERER']);
+		header('Location: http://'.$_SERVER["SERVER_NAME"].':' . $_SERVER['SERVER_PORT'] . '/');
 		exit;
 	}
 
