@@ -83,7 +83,11 @@ li {
   list-style: none; }
 
 a, button, img, a:focus, *:focus, button:focus {
-  outline: none !important; }
+  outline: none !important;
+  text-decoration: none; }
+
+button span {
+  color: #fff; }
 
 a:hover {
   cursor: pointer; }

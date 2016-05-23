@@ -2,7 +2,7 @@
 <html ng-app="app">
 <head>
 <title>新seodoor.jp</title>
-<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
 <link rel="stylesheet" href="css/global.css">
 </head>
 <body ng-controller="MainCtrl">
@@ -22,7 +22,7 @@
             </a>
             <form action="model/index.php" method="post">
               <input type="hidden" name="delete_id" value="{{project.id}}">
-              <input type="submit" value="delete" class="btn btn-danger">
+              <md-button type="submit" value="delete" class="md-raised md-warn" aria-label="DELETE">DELETE</md-button>
             </form>
             {{project.created}}
           </li>
@@ -30,12 +30,12 @@
       </div>
 
       <div class="form-area">
-        <h2>
-          NEW PROJECT?
-        </h2>
         <form class="col-md-4" action="model/index.php" method="post">
-          <input name="title" type="text" class="form-control">
-          <input type="submit" class="btn btn-default">
+          <md-input-container>
+            <label for="title">TITLE</label>
+            <input name="title" type="text" class="form-control">
+            <md-button type="submit" class="md-raised md-primary">CREATE</md-button>
+          </md-input-container>
         </form>
       </div>
     </div>
@@ -44,6 +44,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-resource.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+
   <script src="/controller/index.js"></script>
 </body>
 </html>
