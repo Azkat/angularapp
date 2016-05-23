@@ -20,7 +20,11 @@
             <a href="/?id={{project.id}}" ng-click="titleClick(project.id)">
               {{project.title}}
             </a>
-            {{editProject.text}}
+            <form action="model/index.php" method="post">
+              <input type="hidden" name="delete_id" value="{{project.id}}">
+              <input type="submit" value="delete" class="btn btn-danger">
+            </form>
+            {{project.created}}
           </li>
         </ul>
       </div>
@@ -29,7 +33,7 @@
         <h2>
           NEW PROJECT?
         </h2>
-        <form class="col-md-4" action="api.php" method="post">
+        <form class="col-md-4" action="model/index.php" method="post">
           <input name="title" type="text" class="form-control">
           <input type="submit" class="btn btn-default">
         </form>
@@ -40,6 +44,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-resource.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
-  <script src="js/controller.js"></script>
+  <script src="/controller/index.js"></script>
 </body>
 </html>

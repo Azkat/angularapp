@@ -29,10 +29,20 @@ class IndexModel extends CommonFunction{
 		exit;
 	}
 
+	public function delete_data($delete_id){
+		$sql = 'DELETE FROM pro WHERE id = ?';
+		$sth = $this->db->prepare($sql);
+		$sth->execute(array(
+			$delete_id,
+		));
+		header('Location: http://'.$_SERVER["SERVER_NAME"].':' . $_SERVER['SERVER_PORT'] . '/');
+		exit;
+	}
+
 	public function get_data($id){	
 		$result = array();
 
-		$sql = "SELECT id, title FROM pro WHERE id = ?";
+		$sql = "SELECT id, title, created, modified FROM pro WHERE id = ?";
 		$sth = $this->db->prepare($sql);
 		$sth->execute(array(
 			$id,

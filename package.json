@@ -1,6 +1,7 @@
 {
   "name": "angularapp",
   "version": "1.0.0",
+  "description": "",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,9 +16,9 @@
     "url": "https://github.com/attskato/angularapp/issues"
   },
   "homepage": "https://github.com/attskato/angularapp#readme",
-  "description": "",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-sass": "^2.3.1"
+    "gulp-sass": "^2.3.1",
+    "gulp-util": "^3.0.7"
   }
 }
