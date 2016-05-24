@@ -119,3 +119,6 @@ body, #container {
     #content .form-area h2 {
       padding-right: 15px;
       padding-left: 16px; }
+
+.animate {
+  transition: all linear 0.5s; }

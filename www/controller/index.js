@@ -1,13 +1,16 @@
 var app = angular.module('app', ['ngResource','ngRoute', 'ngMaterial', 'ngAnimate', 'ngAria']);
 
-app.config(['$locationProvider', function($locationProvider) {
-
+app.config(['$locationProvider','$routeProvider', function($locationProvider, $routeProvider) {
     $locationProvider.html5Mode({
       enabled: true,
       requireBase: false
     });
 
-}]);
+    $routeProvider
+      .when(':id', {templateUrl:'/partial/test.html'});
+  }
+
+]);
 
 app.controller('MainCtrl', function($scope, $resource, $window, $location, $route, $rootScope) {
   var idParam = $location.search().id;
@@ -33,11 +36,8 @@ app.controller('MainCtrl', function($scope, $resource, $window, $location, $rout
   }
 });
 
+
 //reload when history back or go
 window.onpopstate = function() {
   location.reload();
 }
-
-
-
-
